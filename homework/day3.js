@@ -5,9 +5,13 @@
 */
 
 // 0. Print "Hello, world" to the console.
-
+console.log("Hello, world");
 
 // 1. Write an if statement to check if a value is greater than or equal to 10.
+ var time = 10; 
+ if (time>=10){
+ 	console.log("timeisgreater")
+ } 
 
 
 // 2. Write an if statement to check if a string begins with Z
@@ -25,17 +29,24 @@ var person = {
 	grade: 12
 }
 	// a. Print the value for key "name" in the above object using dot notation.
+person.hasComputer = true; 
 
 
 	// b. Print the value for key "school" in the above object using bracket notation.
+person["hasComputer"] = true; 
 
+console.log(person);
 
 // 5. Add a value to this array using the push function.
 var fruits = ["pomegranate", "peach", "pear", "pomelo", "rice"];
+fruits.push("apple");
+console.log("fruits1: ", fruits);
 
 
 // 6. Remove the value "rice" from the fruits array. Try the splice function. 
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+fruits.splice(4);
+console.log("fruits2: ", fruits);
 
 
 // 7. Add a key-value to the person object above with key = "hasComputer" and value = true.
@@ -52,9 +63,17 @@ var fruits = ["pomegranate", "peach", "pear", "pomelo", "rice"];
 
 // input: [5, 10, 15, 20, 25]
 function firstAndLast(list) {
+var newArray = [];
+var first = list.shift();
+newArray.push(first);
+var last = list.pop(); 
+newArray.push(last);
+return newArray;
 
 }
 
+myArray=[1,3,7,9,11];
+console.log(firstAndLast(myArray));
 
 // 11. Take an array and return all elements less than 5. 
 // Write this code inside a function.
