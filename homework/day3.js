@@ -5,6 +5,7 @@
 */
 
 // 0. Print "Hello, world" to the console.
+
 console.log("Hello, world");
 
 // 1. Write an if statement to check if a value is greater than or equal to 10.
@@ -20,7 +21,6 @@ console.log("Hello, world");
 // 3. Print the third item in this array using bracket notation.
 var list = ["a", "q", "f", "g", "p"];
 
-
 // 4. Objects
 var person = {
 	name: "Fawzi",
@@ -31,11 +31,14 @@ var person = {
 	// a. Print the value for key "name" in the above object using dot notation.
 person.hasComputer = true; 
 
+ 
 
 	// b. Print the value for key "school" in the above object using bracket notation.
 person["hasComputer"] = true; 
 
+
 console.log(person);
+
 
 // 5. Add a value to this array using the push function.
 var fruits = ["pomegranate", "peach", "pear", "pomelo", "rice"];
@@ -45,10 +48,17 @@ console.log("fruits1: ", fruits);
 
 // 6. Remove the value "rice" from the fruits array. Try the splice function. 
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+
 fruits.splice(4);
 console.log("fruits2: ", fruits);
 
+var fruits = ["pomegranate", "peach", "pear", "pomelo", "rice"];
+fruits.splice(4);
+console.log(fruits);
+//expected output:array['pomegranate','peach','pear','pomelo']
 
+
+//expected output:['pomegranate','peach','pear','pomelo']
 // 7. Add a key-value to the person object above with key = "hasComputer" and value = true.
 
 
@@ -75,7 +85,7 @@ return newArray;
 myArray=[1,3,7,9,11];
 console.log(firstAndLast(myArray));
 
-// 11. Take an array and return all elements less than 5. 
+ghty// 11. Take an array and return all elements less than 5. 
 // Write this code inside a function.
 // input: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 function lessThanFive(list) {
