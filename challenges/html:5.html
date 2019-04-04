@@ -20,10 +20,34 @@
 <body>
 	<h1 id="hello"> hello </h1>
 	<p id="antonbox">I love u anton sleibi</p>
-</body>
+
+<button onclick="makePokemon()">Click to display Pokemon!</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	// function makePokemon() {
+	// 	console.log("makePokemon function call");
+
+function makePokemon() {
+			var url = `https://pokeapi.co/api/v2/pokemon/1`;
+			$.ajax({
+				url: url,
+				type: 'GET',
+				beforeSend: function (xhr) {
+				    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+				},
+				success: function (data) { 
+					// $('body').css( 'cursor', `url(${data.sprites.front_default}), auto` );
+					console.log(picture);
+				},
+				error: function (data) {
+					console.log(data);
+				},
+			});
+}		
+
+</script>
 
 </html>
-
 
 
 

@@ -112,9 +112,8 @@
 			$('<tr><td>'+ color +'</td><td>'+ speed +'</td></tr>').appendTo('table#notesList')
 		}
 
-		function getCharacter() {
-			var characterId = Math.ceil(Math.random() * 50);
-			var url = `https://pokeapi.co/api/v2/pokemon/${characterId}`;
+		function makePokemon() {
+			var url = `https://pokeapi.co/api/v2/pokemon/1`;
 			$.ajax({
 				url: url,
 				type: 'GET',
@@ -123,7 +122,7 @@
 				},
 				success: function (data) { 
 					// $('body').css( 'cursor', `url(${data.sprites.front_default}), auto` );
-					$("#helloMessage").text(`Hello there ${data.species.name}`);
+					console.log(picture);
 				},
 				error: function (data) {
 					console.log(data);
